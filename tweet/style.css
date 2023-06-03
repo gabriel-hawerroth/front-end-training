@@ -1,0 +1,170 @@
+:root {
+    --bg-color: black;
+    --hover-bg-color: rgba(255, 255, 255, 0.03);
+    --primary-font-color: rgb(217, 217, 217);
+    --secondary-font-color: rgb(110, 118, 125);
+    --reply-active-color: rgb(29, 155, 240);
+    --retweet-active-color: rgb(0, 186, 124);
+    --favorite-active-color: rgb(249, 24, 128);
+}
+
+body {
+    overflow: hidden;
+    background-color: black;
+    font-family: Helvetica, sans-serif;
+    font-size: 15px;
+    color: var(--primary-font-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 80vh;
+}
+
+.hovered-background {
+    width: 33rem;
+    height: 8rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.tweet-article {
+    display: flex;
+    margin-right: 4vw;
+    max-width: 29rem;
+    max-height: 10rem;
+}
+
+.hovered-background:hover {
+    background-color: var(--hover-bg-color);
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+}
+
+p {
+    max-width: 25rem;
+    overflow-wrap: break-word;
+}
+
+.tweet-article>.tweet-avatar {
+    flex-basis: 48px;
+    margin-right: 12px;
+    margin-top: 8px;
+}
+
+.tweet-article>.tweet-avatar img {
+    width: 100%;
+    border-radius: 50%;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.tweet-article>.tweet-avatar img:hover {
+    opacity: 0.85;
+}
+
+.tweet-article>.tweet>.tweet-header {
+    margin-bottom: 3px;
+}
+
+.tweet-article>.tweet>.tweet-header a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.tweet-article>.tweet>.tweet-header>.twitter-user>.twitter-handle,
+.tweet-article>.tweet>.tweet-header>.tweet-timestamp,
+.tweet-article>.tweet>.tweet-header>.divider {
+    color: var(--secondary-font-color);
+}
+
+.tweet-article>.tweet>.tweet-header a.tweet-timestamp:hover,
+.tweet-article>.tweet>.tweet-header a.twitter-user:hover>.twitter-name {
+    text-decoration: underline;
+}
+
+.tweet-article>.tweet>.tweet-content p {
+    margin: 0;
+}
+
+.tweet-article>.tweet>.tweet-content>.actions {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 13px;
+    padding: 0 2px;
+}
+
+.tweet-article>.tweet>.tweet-content>.actions>.action {
+    display: flex;
+    border: none;
+    padding: 0;
+    background-color: transparent;
+    color: var(--secondary-font-color);
+    font-size: inherit;
+}
+
+.tweet-article>.tweet>.tweet-content>.actions>.action span {
+    padding: 0 12px;
+    transition: color 0.2s;
+}
+
+.tweet-article>.tweet>.tweet-content>.actions>.action>.icon {
+    position: relative;
+    line-height: 0;
+}
+
+.tweet-article>.tweet>.tweet-content>.actions>.action>.icon>.backdrop {
+    background-color: var(--secondary-font-color);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border-radius: 50%;
+    opacity: 0;
+    transition: all 0.2s;
+}
+
+.tweet-article>.tweet>.tweet-content>.actions>.action>.icon>svg {
+    width: 1.25em;
+    height: 1.25em;
+    fill: var(--secondary-font-color);
+    transition: fill 0.2s;
+}
+
+.tweet-article>.tweet>.tweet-content>.actions>.action:hover span,
+.tweet-article>.tweet>.tweet-content>.actions>.action:hover>.icon>svg {
+    color: var(--reply-active-color);
+    fill: var(--reply-active-color);
+    cursor: pointer;
+}
+
+.tweet-article>.tweet>.tweet-content>.actions>.action:hover>.icon>.backdrop {
+    background-color: var(--reply-active-color);
+    margin: -6px;
+    opacity: 0.1;
+    cursor: pointer;
+}
+
+.tweet-article>.tweet>.tweet-content>.actions>.action.retweet:hover span,
+.tweet-article>.tweet>.tweet-content>.actions>.action.retweet:hover>.icon>svg {
+    color: var(--retweet-active-color);
+    fill: var(--retweet-active-color);
+}
+
+.tweet-article>.tweet>.tweet-content>.actions>.action.retweet:hover>.icon>.backdrop {
+    background-color: var(--retweet-active-color);
+    margin: -6px;
+    opacity: 0.1;
+}
+
+.tweet-article>.tweet>.tweet-content>.actions>.action.favorite:hover span,
+.tweet-article>.tweet>.tweet-content>.actions>.action.favorite:hover>.icon>svg {
+    color: var(--favorite-active-color);
+    fill: var(--favorite-active-color);
+}
+
+.tweet-article>.tweet>.tweet-content>.actions>.action.favorite:hover>.icon>.backdrop {
+    background-color: var(--favorite-active-color);
+    margin: -6px;
+    opacity: 0.1;
+}

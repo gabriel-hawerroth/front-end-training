@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Site Idosos</title>
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <img id="security-icon" src="Security.png" alt="Ícone de segurança">
+    <header id="header">
+        <ul class="box-buttons">
+            <span id="golpes-button" class=" top-button">Golpes/fraudes</span>
+            <span id="senhas-button" class="top-button">Senhas</span>
+            <span id="redes-button" class="top-button">Redes sociais</span>
+        </ul>
+    </header>
+
+    <!-- BODY -->
+    <section id="body">
+        <section id="inicial-section">
+            <div id="inicial-title">
+                <h1>Um Guia para a</h1>
+                <h1>Segurança Online</h1>
+            </div>
+        </section>
+        <section id="golpes-section">
+            <div class="title">
+                <h1>Um Guia para a Segurança Online:</h1>
+                <h1>Golpes e Fraudes Digitais</h1>
+            </div>
+        </section>
+        <section id="senhas-section">
+            <div class="title">
+                <h1>Um Guia para a Segurança Online:</h1>
+                <h1>Senhas e autenticação de dois fatores</h1>
+            </div>
+        </section>
+        <section id="redes-section">
+            <div class="title">
+                <h1>Um Guia para a Segurança Online:</h1>
+                <h1>Cuidados com as redes sociais</h1>
+            </div>
+        </section>
+    </section>
+
+    <script>
+
+        var iconSecurity = document.getElementById('security-icon');
+        var golpesButton = document.getElementById('golpes-button');
+        var senhasButton = document.getElementById('senhas-button');
+        var redesButton = document.getElementById('redes-button');
+
+        var inicialSection = document.getElementById('inicial-section');
+        var golpesSection = document.getElementById('golpes-section');
+        var senhasSection = document.getElementById('senhas-section');
+        var redesSection = document.getElementById('redes-section');
+
+        iconSecurity.addEventListener('click', function () {
+            inicialSection.style.display = 'block';
+            golpesSection.style.display = 'none';
+            senhasSection.style.display = 'none';
+            redesSection.style.display = 'none';
+        });
+
+        golpesButton.addEventListener('click', function () {
+            inicialSection.style.display = 'none';
+            golpesSection.style.display = 'block';
+            senhasSection.style.display = 'none';
+            redesSection.style.display = 'none';
+        });
+
+        senhasButton.addEventListener('click', function () {
+            inicialSection.style.display = 'none';
+            golpesSection.style.display = 'none';
+            senhasSection.style.display = 'block';
+            redesSection.style.display = 'none';
+        });
+
+        redesButton.addEventListener('click', function () {
+            inicialSection.style.display = 'none';
+            golpesSection.style.display = 'none';
+            senhasSection.style.display = 'none';
+            redesSection.style.display = 'block';
+        });
+
+    </script>
+
+</body>
+
+</html>

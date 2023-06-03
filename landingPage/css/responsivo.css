@@ -1,0 +1,203 @@
+/*Tablet*/ 
+
+@media only screen and (min-width: 768px) and (max-width: 959px) {
+    
+    .topo-do-site {
+        background-image: url(../img/banner-tablet.png);
+        width: 100%;
+        background-size: cover;
+    }
+
+    .topo-do-site h1 {
+        font-size: 30px;
+    }
+
+    .imagens-secao {
+        display: none;
+    }
+
+    .secao-1 h2 {
+        font-size: 28px;
+    }
+
+    .render {
+        margin-top: 161px;
+    }
+
+    .secao-2 h2 {
+        font-size: 28px;
+    }
+
+    .secao-3 li {
+        width: 230px;
+
+    }
+
+    .secao-3 li h3 {
+        font-size: 17px;
+    }
+
+    .secao-3 li p {
+        font-size: 13px;
+    }
+
+    .icone {
+        padding: 35px 60px;
+    }
+
+    .secao-4 {
+        height: 600px;
+    }
+    .secao-4 p {
+        font-size: 20px;
+    }
+
+    .secao-4 h2 {
+        font-size: 25px;
+    }
+
+    .secao-6 h2 {
+        font-size: 25px;
+    }
+
+    .secao-6 p {
+        font-size: 12px;
+    }
+
+    .eletrica {
+        margin-top: 90px;
+    }
+
+    .secao-7 {
+        margin-top: -120px;
+    }
+
+    .secao-7 li h3 {
+        font-size: 18px;
+    }
+
+    .secao-7 li p {
+        font-size: 15px;
+    }
+
+    .secao-8 {
+        margin-top: -1px;
+    }
+
+    .secao-9 {
+        height: 330px;
+    }
+
+    .secao-9 h2 {
+        margin-top: 95px;
+        font-size: 25px;
+    }
+
+    .secao-9 p {
+        font-size: 11px;
+    }
+    
+    .profissional {
+        margin-top: -44px;
+    }
+
+    .voltar {
+        padding-left: 12%;
+    }
+
+}
+
+/*Smartphone*/
+
+@media only screen and (max-width: 768px){
+    	
+    .topo-do-site {
+        background: url(../img/banner-cel.png);
+        margin-top: -100px;
+    }
+
+    .topo-do-site h1 {
+        margin-top: 150px;
+        font-size: 21px;
+        margin-left: 0%;
+    }
+
+    .topo-do-site p {
+        font-size: 16px;
+        margin-left: 0%;
+    }
+
+    .botao {
+        margin-top: 280px;
+        font-size: 15px;
+    }
+
+    .imagens-secao {
+        display: none;
+    }
+
+    .secao-1 h2 {
+        margin-top: 20px;
+        font-size: 28px;
+    }
+
+    .render {
+        display: none;
+    }
+
+    .secao-2 h2 {
+        margin-top: 60px;
+        font-size: 28px;
+    }
+
+    .eletricista {
+        display: none;
+    }
+
+    .secao-3 h2 {
+        font-size: 26px;
+    }
+
+    .secao-5 h2 {
+        font-size: 26px;
+    }
+
+    .secao-6 h2 {
+        margin-top: -40px;
+        font-size: 25px;
+    }
+
+    .secao-6 p {
+        text-transform: lowercase;
+    }
+
+    .eletrica {
+        display: none;
+    }
+
+    .secao-7 {
+        height: 3200px;
+    }
+
+    .secao-7 h2 {
+        font-size: 25px;
+    }
+
+    .secao-9 {
+        height: 800px;
+    }
+
+    .profissional {
+        border-radius: 100px;
+        -webkit-box-sizing: content-box;
+        box-sizing: content-box;
+        width: 300px;
+        height: 300px;
+        padding-top: 40px;
+    }
+
+    .secao-9 h2 {
+        margin-top: 30px;
+    }
+
+}

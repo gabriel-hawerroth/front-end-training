@@ -1,0 +1,99 @@
+:root {
+    --topBackground: rgba(64, 131, 114, 0.938);
+    --bodyBackground: rgba(105, 167, 146, 0.712);
+    --top-buttons: rgba(231, 255, 243, 0.932);
+    --body-text-color: rgba(24, 70, 54, 0.945);
+}
+
+* {
+    margin: 0;
+}
+
+/* HEADER */
+
+#header {
+    background-color: var(--topBackground);
+    width: 100vw;
+    height: 12vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#security-icon {
+    position: absolute;
+    width: 45px;
+    height: 45px;
+    margin: 2.8vh 0 0 5vw;
+}
+
+.box-buttons {
+    display: flex;
+    width: 48vw;
+    justify-content: space-around;
+    padding: 0px 45px 0px 0px;
+}
+
+.top-button {
+    color: var(--top-buttons);
+    font-size: 1.65em;
+    font-weight: bold;
+}
+
+.top-button:hover {
+    cursor: pointer;
+}
+
+#security-icon:hover {
+    cursor: pointer;
+}
+
+/* BODY */
+
+#body {
+    background-color: var(--bodyBackground);
+    width: 100vw;
+    height: 42.5vw;
+    color: var(--body-text-color);
+}
+
+#inicial-section {
+    width: 100vw;
+    height: 150px;
+    padding-top: 160px;
+
+}
+
+#inicial-title h1 {
+    display: flex;
+    font-size: 5.6em;
+    font-weight: bolder;
+    color: var(--body-text-color);
+    justify-content: center;
+    padding-right: 40px;
+}
+
+
+#golpes-section {
+    display: none;
+}
+
+#senhas-section {
+    display: none;
+}
+
+#redes-section {
+    display: none;
+}
+
+.title {
+    padding: 23px 40px 0 0;
+}
+
+.title h1 {
+    display: flex;
+    font-size: 2.1em;
+    font-weight: bolder;
+    color: var(--body-text-color);
+    justify-content: center;
+}
