@@ -1,0 +1,1 @@
+Este é um projeto criado pelo youtuber 'WD - Elvis Alencar', os arquivos css 'grid', 'normalize' e 'reset', foram passados prontos por ele, já os arquivos 'responsivo' e 'style' foram desenvolvidos no decorrer do projeto.
