@@ -1,0 +1,183 @@
+$bg-color: black;
+$hover-bg-color: rgba(255, 255, 255, 0.03);
+$primary-font-color: rgb(217, 217, 217);
+$secondary-font-color: rgb(110, 118, 125);
+$reply-active-color: rgb(29, 155, 240);
+$retweet-active-color: rgb(0, 186, 124);
+$favorite-active-color: rgb(249, 24, 128);
+
+body {
+    overflow: hidden;
+    background-color: black;
+    font-family: Helvetica, sans-serif;
+    font-size: 15px;
+    color: $primary-font-color;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 80vh;
+
+    .hovered-background {
+        width: 33rem;
+        height: 8rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        &:hover {
+            background-color: $hover-bg-color;
+            cursor: pointer;
+            transition: background-color 0.2s ease-in-out;
+        }
+    }
+
+    .tweet-article {
+        display: flex;
+        margin-right: 4vw;
+        max-width: 29rem;
+        max-height: 10rem;
+
+        >.tweet-avatar {
+            flex-basis: 48px;
+            margin-right: 12px;
+            margin-top: 8px;
+
+            img {
+                width: 100%;
+                border-radius: 50%;
+                transition: opacity 0.3s ease-in-out;
+
+                &:hover {
+                    opacity: 0.85;
+                }
+            }
+        }
+
+        .tweet {
+            >.tweet-header {
+                margin-bottom: 3px;
+
+                a {
+                    color: inherit;
+                    text-decoration: none;
+                }
+
+                >.twitter-user>.twitter-handle,
+                >.tweet-timestamp,
+                >.divider {
+                    color: $secondary-font-color;
+                }
+
+                a.tweet-timestamp:hover,
+                a.twitter-user:hover>.twitter-name {
+                    text-decoration: underline;
+                }
+            }
+
+            .tweet-content {
+                >.tweet-text {
+                    max-width: 25rem;
+                    overflow-wrap: break-word;
+
+                    p {
+                        margin: 0;
+                    }
+                }
+
+                >.actions {
+                    display: flex;
+                    justify-content: space-between;
+                    margin-top: 13px;
+                    padding: 0 2px;
+
+                    >.action {
+                        display: flex;
+                        border: none;
+                        padding: 0;
+                        background-color: transparent;
+                        color: $secondary-font-color;
+                        font-size: inherit;
+
+                        span {
+                            padding: 0 12px;
+                            transition: color 0.2s;
+                        }
+
+                        >.icon {
+                            position: relative;
+                            line-height: 0;
+
+                            >.backdrop {
+                                background-color: $secondary-font-color;
+                                position: absolute;
+                                top: 0;
+                                bottom: 0;
+                                left: 0;
+                                right: 0;
+                                border-radius: 50%;
+                                opacity: 0;
+                                transition: all 0.2s;
+                            }
+
+                            >svg {
+                                width: 1.25em;
+                                height: 1.25em;
+                                fill: $secondary-font-color;
+                                transition: fill 0.2s;
+                            }
+                        }
+
+                        &:hover {
+
+                            span,
+                            >.icon>svg {
+                                color: $reply-active-color;
+                                fill: $reply-active-color;
+                                cursor: pointer;
+                            }
+
+                            >.icon>.backdrop {
+                                background-color: $reply-active-color;
+                                margin: -6px;
+                                opacity: 0.1;
+                                cursor: pointer;
+                            }
+                        }
+
+                        &.retweet {
+                            &:hover {
+                                >.icon>.backdrop {
+                                    background-color: $retweet-active-color;
+                                    margin: -6px;
+                                    opacity: 0.1;
+                                }
+
+                                span,
+                                >.icon>svg {
+                                    color: $retweet-active-color;
+                                    fill: $retweet-active-color;
+                                }
+                            }
+                        }
+
+                        &.favorite {
+                            &:hover {
+                                >.icon>.backdrop {
+                                    background-color: $favorite-active-color;
+                                    margin: -6px;
+                                    opacity: 0.1;
+                                }
+
+                                span,
+                                >.icon>svg {
+                                    color: $favorite-active-color;
+                                    fill: $favorite-active-color;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

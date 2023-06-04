@@ -1,0 +1,136 @@
+body {
+  overflow: hidden;
+  background-color: black;
+  font-family: Helvetica, sans-serif;
+  font-size: 15px;
+  color: rgb(217, 217, 217);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 80vh;
+}
+body .hovered-background {
+  width: 33rem;
+  height: 8rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body .hovered-background:hover {
+  background-color: rgba(255, 255, 255, 0.03);
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+body .tweet-article {
+  display: flex;
+  margin-right: 4vw;
+  max-width: 29rem;
+  max-height: 10rem;
+}
+body .tweet-article > .tweet-avatar {
+  flex-basis: 48px;
+  margin-right: 12px;
+  margin-top: 8px;
+}
+body .tweet-article > .tweet-avatar img {
+  width: 100%;
+  border-radius: 50%;
+  transition: opacity 0.3s ease-in-out;
+}
+body .tweet-article > .tweet-avatar img:hover {
+  opacity: 0.85;
+}
+body .tweet-article .tweet > .tweet-header {
+  margin-bottom: 3px;
+}
+body .tweet-article .tweet > .tweet-header a {
+  color: inherit;
+  text-decoration: none;
+}
+body .tweet-article .tweet > .tweet-header > .twitter-user > .twitter-handle,
+body .tweet-article .tweet > .tweet-header > .tweet-timestamp,
+body .tweet-article .tweet > .tweet-header > .divider {
+  color: rgb(110, 118, 125);
+}
+body .tweet-article .tweet > .tweet-header a.tweet-timestamp:hover,
+body .tweet-article .tweet > .tweet-header a.twitter-user:hover > .twitter-name {
+  text-decoration: underline;
+}
+body .tweet-article .tweet .tweet-content > .tweet-text {
+  max-width: 25rem;
+  overflow-wrap: break-word;
+}
+body .tweet-article .tweet .tweet-content > .tweet-text p {
+  margin: 0;
+}
+body .tweet-article .tweet .tweet-content > .actions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 13px;
+  padding: 0 2px;
+}
+body .tweet-article .tweet .tweet-content > .actions > .action {
+  display: flex;
+  border: none;
+  padding: 0;
+  background-color: transparent;
+  color: rgb(110, 118, 125);
+  font-size: inherit;
+}
+body .tweet-article .tweet .tweet-content > .actions > .action span {
+  padding: 0 12px;
+  transition: color 0.2s;
+}
+body .tweet-article .tweet .tweet-content > .actions > .action > .icon {
+  position: relative;
+  line-height: 0;
+}
+body .tweet-article .tweet .tweet-content > .actions > .action > .icon > .backdrop {
+  background-color: rgb(110, 118, 125);
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  border-radius: 50%;
+  opacity: 0;
+  transition: all 0.2s;
+}
+body .tweet-article .tweet .tweet-content > .actions > .action > .icon > svg {
+  width: 1.25em;
+  height: 1.25em;
+  fill: rgb(110, 118, 125);
+  transition: fill 0.2s;
+}
+body .tweet-article .tweet .tweet-content > .actions > .action:hover span,
+body .tweet-article .tweet .tweet-content > .actions > .action:hover > .icon > svg {
+  color: rgb(29, 155, 240);
+  fill: rgb(29, 155, 240);
+  cursor: pointer;
+}
+body .tweet-article .tweet .tweet-content > .actions > .action:hover > .icon > .backdrop {
+  background-color: rgb(29, 155, 240);
+  margin: -6px;
+  opacity: 0.1;
+  cursor: pointer;
+}
+body .tweet-article .tweet .tweet-content > .actions > .action.retweet:hover > .icon > .backdrop {
+  background-color: rgb(0, 186, 124);
+  margin: -6px;
+  opacity: 0.1;
+}
+body .tweet-article .tweet .tweet-content > .actions > .action.retweet:hover span,
+body .tweet-article .tweet .tweet-content > .actions > .action.retweet:hover > .icon > svg {
+  color: rgb(0, 186, 124);
+  fill: rgb(0, 186, 124);
+}
+body .tweet-article .tweet .tweet-content > .actions > .action.favorite:hover > .icon > .backdrop {
+  background-color: rgb(249, 24, 128);
+  margin: -6px;
+  opacity: 0.1;
+}
+body .tweet-article .tweet .tweet-content > .actions > .action.favorite:hover span,
+body .tweet-article .tweet .tweet-content > .actions > .action.favorite:hover > .icon > svg {
+  color: rgb(249, 24, 128);
+  fill: rgb(249, 24, 128);
+}/*# sourceMappingURL=main.css.map */

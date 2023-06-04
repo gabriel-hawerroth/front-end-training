@@ -41,11 +41,6 @@ body {
     transition: background-color 0.2s ease-in-out;
 }
 
-p {
-    max-width: 25rem;
-    overflow-wrap: break-word;
-}
-
 .tweet-article>.tweet-avatar {
     flex-basis: 48px;
     margin-right: 12px;
@@ -80,6 +75,11 @@ p {
 .tweet-article>.tweet>.tweet-header a.tweet-timestamp:hover,
 .tweet-article>.tweet>.tweet-header a.twitter-user:hover>.twitter-name {
     text-decoration: underline;
+}
+
+.tweet-article>.tweet>.tweet-content>.tweet-text {
+    max-width: 25rem;
+    overflow-wrap: break-word;
 }
 
 .tweet-article>.tweet>.tweet-content p {
