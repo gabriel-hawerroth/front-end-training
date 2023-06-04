@@ -1,0 +1,172 @@
+$background-header: rgb(43, 43, 43);
+$standard-font-color: rgb(238, 238, 238);
+$card-section-background-color: rgb(54, 54, 54);
+$secondary-font-color: rgb(96, 100, 133);
+$boxes-background-color: rgb(65, 65, 65);
+$button-background-color: rgba(155, 155, 155, 0.404);
+$footer-background-color: rgb(0, 30, 95);
+
+body {
+    margin: 0;
+    color: $standard-font-color;
+    font-family: 'Montserrat', 'Poppins', sans-serif;
+    width: max-content;
+    font-size: 15px;
+    height: 700px;
+
+    h1,
+    h3,
+    h5 {
+        &:hover {
+            cursor: default;
+        }
+    }
+
+    >.header {
+        position: fixed;
+        display: flex;
+        place-items: center;
+        height: 60px;
+        background-color: $background-header;
+
+        .text-top {
+            font-size: 1.12em;
+
+            &:hover {
+                cursor: pointer;
+                color: $secondary-font-color;
+            }
+        }
+
+        .left {
+            position: absolute;
+            margin-left: 3vw;
+            width: 300px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .right {
+            margin-left: 87.5vw;
+            width: 11vw;
+        }
+    }
+
+    >.section-1 {
+        width: 98.5vw;
+        height: 500px;
+        background: url(fundo.jpg) no-repeat center center;
+        background-size: cover;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: 'Poppins', sans-serif;
+        color: rgb(255, 255, 255);
+    }
+
+    >.section-2 {
+        display: flex;
+        background-color: $card-section-background-color;
+        height: 400px;
+        align-items: center;
+
+        >.boxes {
+            width: 70vw;
+            display: flex;
+            padding-left: 6%;
+            justify-content: space-between;
+        }
+
+        .box {
+            background-color: $boxes-background-color;
+            width: 28%;
+            height: 255px;
+            border-radius: 4px;
+
+            &:hover {
+                box-shadow:
+                    3px 3px 6px rgba(0, 0, 0, 0.6),
+                    -1.5px -1.5px 4px rgba(0, 0, 0, 0.2);
+            }
+
+            .image {
+                width: 100%;
+                background-size: cover;
+            }
+
+            .card {
+                height: 50%;
+                padding: 8.5% 10% 5% 10%;
+
+                >h3 {
+                    margin: 0;
+                }
+
+                h5 {
+                    font-weight: lighter;
+                    margin: 12px 0px;
+                }
+
+                .button {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    border-radius: 2px;
+                    height: 30px;
+                    background-color: $button-background-color;
+                    margin-top: 18px;
+
+                    h5 {
+                        margin: 0;
+                        font-size: 0.9em;
+                    }
+
+                    &:hover,
+                    h5:hover {
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+
+        .box1 {
+            .image {
+                width: 100%;
+                height: 110px;
+                background-image: url(card1-img.png);
+                border-top-left-radius: 4px;
+                border-top-right-radius: 4px;
+            }
+        }
+
+        .box2 {
+            .image {
+                width: 100%;
+                height: 110px;
+                background-image: url(card2-img.png);
+                border-top-left-radius: 4px;
+                border-top-right-radius: 4px;
+            }
+        }
+
+        .box3 {
+            .image {
+                width: 100%;
+                height: 110px;
+                background-image: url(card3-img.png);
+                border-top-left-radius: 4px;
+                border-top-right-radius: 4px;
+            }
+        }
+    }
+
+    >.footer {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 30px;
+        background-color: $footer-background-color;
+        font-size: 0.85em;
+        color: $standard-font-color;
+    }
+}
