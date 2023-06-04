@@ -13,6 +13,7 @@ body h5:hover {
   cursor: default;
 }
 body > .header {
+  width: 100vw;
   position: fixed;
   display: flex;
   place-items: center;
@@ -38,7 +39,7 @@ body > .header .right {
   width: 11vw;
 }
 body > .section-1 {
-  width: 98.5vw;
+  width: 100vw;
   height: 500px;
   background: url(fundo.jpg) no-repeat center center;
   background-size: cover;

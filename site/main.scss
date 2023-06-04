@@ -23,6 +23,7 @@ body {
     }
 
     >.header {
+        width: 100vw;
         position: fixed;
         display: flex;
         place-items: center;
@@ -53,7 +54,7 @@ body {
     }
 
     >.section-1 {
-        width: 98.5vw;
+        width: 100vw;
         height: 500px;
         background: url(fundo.jpg) no-repeat center center;
         background-size: cover;
