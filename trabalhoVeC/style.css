@@ -9,6 +9,11 @@
 
 * {
     margin: 0;
+    padding: 0;
+}
+
+body {
+    height: 100%;
 }
 
 html {
@@ -20,7 +25,7 @@ html {
 #header {
     position: fixed;
     background-color: var(--topBackground);
-    width: 100vw;
+    width: 100%;
     height: 11vh;
     display: flex;
     align-items: center;
@@ -32,7 +37,7 @@ html {
     z-index: 2;
     width: 32px;
     height: 32px;
-    margin: 3.4vh 0 0 93vw;
+    margin: 0vh 0 0 92vw;
     fill: var(--home-icon-color);
 }
 
@@ -60,14 +65,20 @@ html {
 /* BODY */
 
 #body {
+    display: flex;
+    flex: 1;
     background-color: var(--bodyBackground);
-    width: 100vw;
     color: var(--body-text-color);
+    height: 100%;
+    width: 100%;
 }
 
 #inicial-section {
-    padding-top: 40.4vh;
-    padding-bottom: 32.6vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
 }
 
 #inicial-title h1 {
@@ -80,16 +91,16 @@ html {
 }
 
 
-#golpes-section {
-    display: none;
-}
-
-#senhas-section {
-    display: none;
-}
-
+#golpes-section,
+#senhas-section,
 #redes-section {
     display: none;
+    width: 100%;
+    height: auto;
+    flex-direction: column;
+    flex: 1;
+    background-color: var(--bodyBackground);
+    padding-bottom: 130px;
 }
 
 /* Título das seções */
@@ -109,7 +120,7 @@ html {
 
 /* Conteúdo das seções */
 .content {
-    padding: 0 4em 5em 4em;
+    padding: 0 4em 0 4em;
     font-size: 1.33em;
     font-family: Arial;
 }
@@ -124,16 +135,16 @@ html {
 
 #inicial-title:hover,
 .title:hover,
-.content:hover,
-.video h3 {
+.content:hover {
     cursor: default;
 }
 
+/* linha */
+
 .horizontal-line {
-    border-radius: 20px;
-    width: 80vw;
-    height: 1px;
-    padding: 10vh 0 0 3.1vw;
+    width: 90vw;
+    border-top: 1px solid black;
+    margin: 2em 0 4em 4em;
 }
 
 /* Vídeos das seções */
@@ -145,25 +156,19 @@ html {
     padding-left: 2.5vw;
 }
 
-.videos a img {
+.videos iframe {
     width: 35vw;
     height: 280px;
     border-radius: 5px;
-}
-
-.video h3 {
-    display: flex;
-    justify-content: center;
-    font-size: 1.3em;
-    padding-bottom: 100px;
 }
 
 /* ícones */
 
 .up-icon {
     fill: var(--sound-icon-color);
-    margin: 52vh 0 0 94.2vw;
     position: fixed;
+    bottom: 65px;
+    right: 22px;
     width: 40px;
     height: 40px;
 }
@@ -173,8 +178,9 @@ html {
 
 .sound-icon {
     fill: var(--sound-icon-color);
-    margin: 58.4vh 0 0 94.6vw;
     position: fixed;
+    bottom: 25px;
+    right: 22px;
     width: 35px;
     height: 35px;
 }
