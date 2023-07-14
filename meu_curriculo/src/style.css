@@ -2,29 +2,13 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
 
-/* Reset-CSS - Restaura as configurações para o básico */
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
+* {
     margin: 0;
     padding: 0;
     border: 0;
     font-size: 100%;
     font: inherit;
     vertical-align: baseline;
-}
-article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section {
-display:block;
 }
 
 /* Background Escuro para o Corpo */
@@ -156,7 +140,8 @@ section:last-child {
 .section-content h2 {
   font-family: 'Roboto',Helvetica,Arial,sans-serif;
   font-size: 1.3em;
-  margin-bottom: -2px
+  margin-bottom: -2px;
+  margin-top: -5px;
 }
 
 .section-content p {
@@ -171,7 +156,7 @@ section:last-child {
 
 #soft-skills {
   list-style-type: none;
-  column-count: 2;
+  column-count: 3;
   margin-bottom: 20px;
   font-size: 1em;
   color: rgb(20, 20, 20)
