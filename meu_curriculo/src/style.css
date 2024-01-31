@@ -24,7 +24,7 @@ html, body {
 
 #cv {
   width: 100%;
-  max-width: 800px;
+  max-width: 840px;
   background: #f3f3f3;
   margin: 0px auto;
 }
@@ -44,18 +44,6 @@ p {
   display: flex;
   justify-content: space-between;
 }
-
-/* #avatar {
-  width: 12.5%;
-  margin-right: -20%;
-}
-
-#avatar img {
-  width: 100%;
-  height: auto;
-  border-radius: 50px;
-  -webkit-border-radius: 50px;
-} */
 
 #name-title h1 {
   font-size: 2.4em;
@@ -84,23 +72,19 @@ p {
 }
 
 #contact-details ul li {
-  margin-bottom: 3px;
+  margin-bottom: 8px;
   color: rgb(20, 20, 20)
 }
 
-#contact-details ul li a {
+a {
   color: rgb(20, 20, 20);
   text-decoration: none;
   transition: all .3s ease-in
 }
 
-#contact-details ul li a:hover {
+a:hover {
   color: #006BA6
 }
-
-/* #contact-detail-extranumber {
-  margin-left: 17px;
-} */
 
 /* Corpo do Currículo */
 
@@ -166,19 +150,22 @@ section:last-child {
   margin-bottom: 5px;
 }
 
-.list {
+#hard-skills {
   list-style-type: none;
+  column-count: 2;
   margin-bottom: 20px;
   font-size: 1em;
   color: rgb(20, 20, 20)
 }
 
-.list li {
+#hard-skills li {
   margin-bottom: 5px;
 }
 
-#informativo {
-  font-size: 0.8em;
-  margin: 10px 30px;
-  color: rgb(20, 20, 20);
+#certifications {
+  list-style-type: none;
+}
+
+#certifications li {
+  margin-bottom: 5px;
 }
